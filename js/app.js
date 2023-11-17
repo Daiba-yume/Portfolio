@@ -19,6 +19,31 @@ navLinks.forEach((link) => {
   });
 });
 
+window.addEventListener("noScroll", function () {
+  if (isScrolling) return;
+
+  let fromTop = window.scrollY + window.innerHeight / 3;
+
+  navLinks.forEach((link) => {
+    let section = document.querySelector(link.hash);
+
+    if (link.hash === "#Home") {
+      if (window.scrollY < 100) {
+        navLinks.forEach((link) => link.classList.remove("active"));
+        link.classList.add("active");
+      }
+    } else if (
+      section.offsetTop <= fromTop &&
+      section.offsetTop + section.offsetHeight > fromTop
+    ) {
+      navLinks.forEach((link) => link.classList.remove("active"));
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   const mobileMenuOpenButton = document.getElementById("mobileMenuOpen");
   const mobileMenuCloseButton = document.getElementById("mobileMenuClose");
@@ -29,14 +54,14 @@ document.addEventListener("DOMContentLoaded", function () {
     nav.classList.add("active");
     mobileMenuOpenButton.style.display = "none";
     mobileMenuCloseButton.style.display = "block";
-    body.classList.add("no-scroll");
+    body.classList.add("noScroll");
   });
 
   mobileMenuCloseButton.addEventListener("click", function () {
     nav.classList.remove("active");
     mobileMenuOpenButton.style.display = "block";
     mobileMenuCloseButton.style.display = "none";
-    body.classList.remove("no-scroll");
+    body.classList.remove("noScroll");
   });
 
   // Fermer le menu lorsqu'un lien est cliqué
