@@ -32,6 +32,14 @@ nav {
   justify-content: space-between;
 }
 
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgb(253, 253, 253);
+  z-index: 1000;
+}
+
 nav a {
   display: block;
   color: #0e0a0a;
@@ -327,7 +335,7 @@ nav a.nav-active {
 
 .projetCard {
   width: 45%;
-  height: 680px;
+  height: 750px;
   background-color: hsla(0, 0%, 100%, 0.363);
   border-radius: 20px;
   display: flex;
@@ -347,7 +355,6 @@ nav a.nav-active {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 90%;
   width: 100%;
   text-align: center;
   color: #000;

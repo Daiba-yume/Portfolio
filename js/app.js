@@ -19,6 +19,42 @@ navLinks.forEach((link) => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  // Sélectionnez la barre de navigation
+  const nav = document.getElementById("nav");
+
+  // Fonction pour mettre à jour la classe de la barre de navigation
+  function updateNav() {
+    if (window.scrollY > 0) {
+      nav.classList.add("fixed-nav");
+    } else {
+      nav.classList.remove("fixed-nav");
+    }
+  }
+
+  // Ajoutez un écouteur pour le défilement
+  window.addEventListener("scroll", updateNav);
+
+  // Ajoutez des écouteurs pour les liens de navigation
+  const navLinks = document.querySelectorAll("#nav a");
+  navLinks.forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+
+      // Ajoutez une logique pour faire défiler jusqu'à la section appropriée
+      const targetId = this.getAttribute("href").substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop,
+          behavior: "smooth",
+        });
+      }
+    });
+  });
+});
+
 window.addEventListener("noScroll", function () {
   if (isScrolling) return;
 
@@ -92,8 +128,5 @@ function scrollFunction() {
 }
 
 function backToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
