@@ -6,9 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="Ceci est mon portfolio où l'on retrouve mes différents projets menés à bien et les compétences que j'ai acquises">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-sqxBMUb2Z9Ad3/67li5nqD2iqrqy8w/+TzGlHqiU9zO0+1u7B6rMzi5YoN5m9uHnO4sUVtS/uL0J/wSxNfPVjw=="
-    crossorigin="anonymous" />
   <link rel="stylesheet" href="./styles/style.css" type="text/css">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,15 +18,13 @@
 
 <body id="Home">
 
-  <div id="mobile-nav">
-    <i class="fa-solid fa-bars menu-toggle" id="mobile-menu-open"></i>
-    <i class="fa-solid fa-times menu-toggle" id="mobile-menu-close" style="display: none"></i>
-    <nav id="nav" class="active">
-      <!-- AJout de l'icon -->
+  <div id="mobileNav">
+    <i class="fa-solid fa-bars menu-toggle" id="mobileMenuOpen"></i>
+    <i class="fa-solid fa-times menu-toggle" id="mobileMenuClose" style="display: none"></i>
+    <nav id="nav">
 
-      <!-- ajouter les ancres pour les liens au blocs et les class pour jouer sur display none display block-->
       <div><img src="./img/nav-pdp.jpg" class="slider_pdp_nav"></div>
-      <a href="#Home">Accueil</a>
+      <a href="#Home" class="active">Accueil</a>
       <a href="#About">À propos</a>
       <a href="#Competences">Compétences</a>
       <a href="#Projets">Projets</a>
@@ -74,7 +69,6 @@
               j'explore actuellement un ensemble de compétences essentielles,
               dont HTML, CSS, JavaScript, React et SCSS.
               Mon objectif est de créer des sites Web réactifs et conviviaux.
-
             </p>
             <p>Je me consacre à apprendre et à appliquer les bases du développement,
               en mettant l'accent sur la rédaction de code clair et compréhensible.
@@ -101,21 +95,20 @@
               <li>Configurer la navigation entre les pages de l'application avec React Router</li>
               <li>Développement back-end avec NodeJs</li>
               <li>Implémenter un modèle logique de données conformément à la réglementation</li>
-
-
             </ul>
             <h4>2021 - 2022 : Formation Développeur web et web mobile</h4>
             <span class='expLocation'>Doranco</span>
             <ul>
               <li>Utilisation de Wordpress</li>
               <li>Développement (HTML/CSS/PHP)</li>
+              <li>Mysql (notions)</li>
 
             </ul>
           </div>
         </div>
         <div class="cv">
 
-          <a href="https://drive.google.com/file/d/1iqlxiqS1gitrMB1F9Xr6JjmPJUqQkS66/view?usp=sharing" target="_blank"
+          <a href="https://drive.google.com/file/d/1qdQG5_IBXgPPYKX-we918ybuezNG13eT/view?usp=sharing" target="_blank"
             class="link_cv"><strong>Mon CV</strong> </a>
 
         </div>
@@ -148,11 +141,11 @@
           </div>
           <div class="projetDetail">
             <h3 class="projetTitre">Booki</h3>
-            <p class="projetDesc">Débug et optimisation du site</p>
-            <p class="projectChallenge"> Défi:
-              <br /> - Optimiser les performances d’un site web
-              <br /> - Rédiger un cahier de recette pour tester un site
-              <br /> - Débugger un site web grâce aux Chrome DevTools
+            <p class="projetDesc">Site de réservation en ligne</p>
+            <p class="projectChallenge">
+              <br /> - Implémenter une interface responsive avec HTML et CSS
+              <br /> - Versionner son projet avec Git et Github
+              <br /> - Installer un environnement de développement front-end
             </p>
             <div class="projectTech">
               <img src="./img/Competences/Html5.jpg" alt="Html5" />
@@ -172,11 +165,11 @@
           </div>
           <div class="projetDetail">
             <h3 class="projetTitre">Sophie Bluel</h3>
-            <p class="projetDesc">Débug et optimisation du site</p>
-            <p class="projectChallenge"> Défi:
-              <br /> - Optimiser les performances d’un site web
-              <br /> - Rédiger un cahier de recette pour tester un site
-              <br /> - Débugger un site web grâce aux Chrome DevTools
+            <p class="projetDesc">Développement web avec JavaScript</p>
+            <p class="projectChallenge">
+              <br /> - Page principale présentant les travaux
+              <br /> - Page de connexion de l'administrateur
+              <br /> - Modale à créer pour ajouter de nouveaux projets
             </p>
             <div class="projectTech">
               <img src="./img/Competences/Html5.jpg" alt="Html5" />
@@ -198,7 +191,7 @@
           <div class="projetDetail">
             <h3 class="projetTitre">Nina Carducci</h3>
             <p class="projetDesc">Débug et optimisation du site</p>
-            <p class="projectChallenge"> Défi:
+            <p class="projectChallenge">
               <br /> - Optimiser les performances d’un site web
               <br /> - Rédiger un cahier de recette pour tester un site
               <br /> - Débugger un site web grâce aux Chrome DevTools
@@ -220,11 +213,10 @@
           </div>
           <div class="projetDetail">
             <h3 class="projetTitre">Kasa</h3>
-            <p class="projetDesc">Débug et optimisation du site</p>
-            <p class="projectChallenge"> Défi:
-              <br /> - Optimiser les performances d’un site web
-              <br /> - Rédiger un cahier de recette pour tester un site
-              <br /> - Débugger un site web grâce aux Chrome DevTools
+            <p class="projetDesc">Initialiser une application avec Create React App</p>
+            <p class="projectChallenge">
+              <br /> - Configurer les pages (React Router)
+              <br /> - Composants React
             </p>
             <div class="projectTech">
               <img src="./img/Competences/CSS.jpg" alt="CSS" />
@@ -244,11 +236,11 @@
           </div>
           <div class="projetDetail">
             <h3 class="projetTitre">Mon Vieux Grimoire</h3>
-            <p class="projetDesc">Débug et optimisation du site</p>
-            <p class="projectChallenge"> Défi:
-              <br /> - Optimiser les performances d’un site web
-              <br /> - Rédiger un cahier de recette pour tester un site
-              <br /> - Débugger un site web grâce aux Chrome DevTools
+            <p class="projetDesc">Développement back-end avec NodeJS</p>
+            <p class="projectChallenge">
+              <br /> - Ajout de livres
+              <br /> - Modification / Suppression de livres
+              <br /> - Notations
             </p>
             <div class="projectTech">
               <img src="./img/Competences/JS.jpg" alt="JS" />
@@ -271,25 +263,7 @@
     <section id="Contact" class="contact">
       <h2 class="formTitle">Me contacter</h2>
       <div class="form">
-        <form action="https://formspree.io/f/xyyqklor" method="POST">
-          <div class="formGroup">
-            <label for="prenom">Nom</label>
-            <input type="text" name="nom" placeholder="Nom" required />
-          </div>
-          <div class="formName">
-            <div class="formGroup">
-              <label for="nom">Prénom</label>
-              <input type="text" name="prenom" placeholder="Prénom" required />
-            </div>
-          </div>
-          <div class="formGroup">
-            <label for="email">Email</label>
-            <input type="text" name="email" placeholder="Email" required />
-          </div>
-          <div class="formGroup">
-            <label for="Sujet">Sujet</label>
-            <input type="text" name="sujet" placeholder="Sujet" required />
-          </div>
+        <form action="mailto:daiba_b@yahoo.com" method="post" enctype="text/plain">
           <div class="formGroup">
             <label for="message">Votre message</label>
             <textarea type="text" name="message" id="inputMessage" placeholder="Votre message" required></textarea>
@@ -301,6 +275,8 @@
         </div>
       </div>
     </section>
+
+    <button onclick="backToTop()" id="backToTopBtn"><i class="fa-solid fa-arrow-up"></i></button>
 
     <footer>
       <div class="github-mail">

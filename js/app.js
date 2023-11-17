@@ -20,8 +20,8 @@ navLinks.forEach((link) => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const mobileMenuOpenButton = document.getElementById("mobile-menu-open");
-  const mobileMenuCloseButton = document.getElementById("mobile-menu-close");
+  const mobileMenuOpenButton = document.getElementById("mobileMenuOpen");
+  const mobileMenuCloseButton = document.getElementById("mobileMenuClose");
   const nav = document.querySelector("nav");
   const body = document.body;
 
@@ -46,23 +46,29 @@ document.addEventListener("DOMContentLoaded", function () {
       nav.classList.remove("active");
       mobileMenuOpenButton.style.display = "block";
       mobileMenuCloseButton.style.display = "none";
-      body.classList.remove("no-scroll");
+      body.classList.remove("noScroll");
     });
   }
 });
 
-/*Contact */
+/* Back to top */
 
-const form = document.querySelector("form");
-form.addEventListener("submit", function (e) {
-  const nom = form.querySelector('[name="nom"]').value;
-  const prenom = form.querySelector('[name="prenom"]').value;
-  const email = form.querySelector('[name="email"]').value;
-  const sujet = form.querySelector('[name="sujet"]').value;
-  const message = form.querySelector('[name="message"]').value;
+window.onscroll = function () {
+  scrollFunction();
+};
 
-  if (!nom || !prenom || !email || !sujet || !message) {
-    e.preventDefault();
-    alert("Veuillez remplir tous les champs du formulaire.");
+function scrollFunction() {
+  var button = document.getElementById("backToTopBtn");
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    button.style.display = "block";
+  } else {
+    button.style.display = "none";
   }
-});
+}
+
+function backToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}

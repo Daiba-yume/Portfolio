@@ -11,34 +11,32 @@ body {
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 0 30px;
-  position: sticky;
+  position: fixed;
   top: 0px;
   background-color: #fff;
-  z-index: 10;
+  z-index: 1;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .slider_pdp_nav {
-  width: 40%;
+  width: 20%;
 }
 
 /*Nav*/
 
 nav {
-  width: 400px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  z-index: 5;
 }
 
 nav a {
+  display: block;
+  color: #0e0a0a;
+  padding: 10px 20px;
   text-decoration: none;
-  color: black;
-  font-weight: 600;
-  border-bottom: 2px solid transparent; /* Bordure transparente par défaut */
-  transition: border-bottom 0.3s linear;
 }
 
 nav a:hover,
@@ -51,13 +49,13 @@ nav a.nav-active {
 }
 
 @media (min-width: 768px) {
-  #mobile-menu-open,
-  #mobile-menu-close {
+  #mobileMenuOpen,
+  #mobileMenuClose {
     display: none !important;
   }
 }
 
-.no-scroll {
+.noScroll {
   overflow: hidden;
   height: 100%;
 }
@@ -352,14 +350,7 @@ nav a.nav-active {
   text-align: center;
   color: #000;
 }
-.projetTitre {
-}
-.projetDesc {
-}
-.projectChallenge {
-}
-.projectTech {
-}
+
 .projectTech > img {
   align-items: flex-start;
 }
@@ -390,7 +381,7 @@ nav a.nav-active {
 /* Contact */
 
 .contact {
-  margin: 80px 15px 150px 150px;
+  margin: 90px 35px 150px 150px;
   padding-top: 70px;
 }
 
@@ -410,6 +401,7 @@ form {
 
 .formGroup {
   display: flex;
+
   flex-direction: column;
   margin-bottom: 15px;
 }
@@ -490,8 +482,21 @@ form {
 
 .formImg img {
   display: flex;
-  width: 70%;
-  margin-left: 140px;
+  justify-content: end;
+  width: 50%;
+}
+
+#backToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0f4766;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
 }
 
 /* Footer */
@@ -589,27 +594,16 @@ footer p {
   .introContainer {
     flex-direction: column-reverse;
     width: 100%;
-    align-items: center;
   }
 
   .introText {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-  }
-
-  .introName {
-    text-align: center;
-    margin: 30px;
   }
 
   .introAbout {
     text-align: center;
-  }
-
-  .planetContainer {
-    margin-left: 80px;
   }
 
   .planet {
@@ -669,16 +663,13 @@ footer p {
 
   /* Compétences */
 
-  .competences {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
   .competences h2 {
     margin-bottom: 50px;
   }
 
+  .competencesContainer {
+    display: block;
+  }
   .competencesContainer img {
     margin-top: 50px;
     height: 40px;
@@ -692,10 +683,12 @@ footer p {
 
   /*Projets*/
   .projets {
+    flex-direction: column;
     padding: 50px 15px;
   }
 
   .projetCard {
+    width: 100%;
     height: auto;
   }
 
