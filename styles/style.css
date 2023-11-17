@@ -696,6 +696,11 @@ footer p {
     height: 190px;
   }
 
+  /* Button top*/
+
+  #backToTopBtn {
+    display: none;
+  }
   /*Form*/
 
   .contact {
