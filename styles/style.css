@@ -686,6 +686,7 @@ footer p {
     margin-top: 50px;
     height: 40px;
     margin: inherit;
+    padding: inherit;
   }
 
   .competencesContainer img:hover {
