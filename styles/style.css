@@ -713,7 +713,6 @@ footer p {
 
   #backToTopBtn {
     display: none;
-    right: 50px;
   }
   /*Form*/
 
@@ -875,6 +874,11 @@ footer p {
   #inputMessage {
     height: 200px;
   }
+
+  #backToTopBtn {
+    right: 50px;
+  }
+
   /* Ajustements pour le pied de page */
   footer {
     height: 150px;
