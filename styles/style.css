@@ -543,7 +543,7 @@ footer p {
 
 /* Mobile*/
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   /*Nav*/
 
   #mobileNav i {
@@ -742,7 +742,7 @@ footer p {
 }
 
 /* Tablettes */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   /* Ajustements pour le header */
   header {
     padding: 0 15px;
