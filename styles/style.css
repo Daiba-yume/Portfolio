@@ -713,6 +713,7 @@ footer p {
 
   #backToTopBtn {
     display: none;
+    right: 50px;
   }
   /*Form*/
 
