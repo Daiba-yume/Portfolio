@@ -677,6 +677,10 @@ footer p {
     font-size: 1.2rem;
   }
 
+  .aboutContentExp li {
+    margin-bottom: 15px;
+  }
+
   .expLocation {
     font-size: 1.1rem;
   }
