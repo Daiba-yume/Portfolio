@@ -225,7 +225,6 @@ nav a.nav-active {
 }
 
 .aboutContentExp li {
-  margin-bottom: 0;
   line-height: 1.2;
   text-align: left;
 }
@@ -675,10 +674,6 @@ footer p {
 
   .aboutContentExp h4 {
     font-size: 1.2rem;
-  }
-
-  .aboutContentExp li {
-    margin-bottom: 15px;
   }
 
   .expLocation {
