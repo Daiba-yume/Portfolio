@@ -669,9 +669,8 @@ footer p {
     font-size: 1.3rem;
   }
 
-  .aboutContentMe p,
-  .aboutContentExp li {
-    font-size: 1rem;
+  .aboutContentMe p {
+    text-align: center;
   }
 
   .aboutContentExp h4 {
@@ -688,9 +687,6 @@ footer p {
     margin-bottom: 50px;
   }
 
-  .competencesContainer {
-    display: block;
-  }
   .competencesContainer img {
     margin-top: 50px;
     height: 40px;
